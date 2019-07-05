@@ -32,3 +32,15 @@ n3.next_node = n4
 n4.next_node = n5
 n5.next_node = n6
 n6.next_node = n7
+
+pal1 = Node(0)
+pal2 = Node(1)
+pal3 = Node(3)
+pal4 = Node(1)
+pal5 = Node(0)
+
+
+pal1.next_node = pal2
+pal2.next_node = pal3
+pal3.next_node = pal4
+pal4.next_node = pal5
