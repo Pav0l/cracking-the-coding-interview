@@ -1,13 +1,7 @@
 """
 Remove Dups: Write code to remove duplicates from an unsorted linked list.
 """
-from node import n0
-
-
-def print_nodes(node):
-    while node:
-        print(node.value)
-        node = node.next_node
+from node import n0, print_nodes
 
 
 print(f'Linked list:')

@@ -10,6 +10,12 @@ class Node:
         self.next_node = next_node
 
 
+def print_nodes(node):
+    while node:
+        print(node.value)
+        node = node.next_node
+
+
 n0 = Node(10)
 n1 = Node(6)
 n2 = Node(5)
