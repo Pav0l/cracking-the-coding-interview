@@ -26,7 +26,7 @@ class Stack:
         else:
             # take node at head
             current_head = self.head
-            # assign new node to head with default next_node = None
+            # assign new node to head with next_node = previous head
             self.head = Node(value)
             self.head.next_node = current_head
 
@@ -49,7 +49,7 @@ class Stack:
 s = Stack()
 print(f'first len: {s.len()} ...should be 0')
 s.add_to_stack(10)
-print(f'added 10. HEAD = {s.head.value}. Length  {s.len()} ..should be 1')
+print(f'added 10. HEAD = {s.head.value}. Length {s.len()} ..should be 1')
 s.add_to_stack(20)
 s.add_to_stack(30)
 s.add_to_stack(40)
