@@ -55,16 +55,17 @@ class Queue:
 q = Queue()
 print(f'first len: {q.len()} ...should be 0')
 q.add_to_queue(10)
-print(f'added 1 item: {q.len()} ..should be 1')
+print(f'added 10: HEAD = {q.head.value}. Length {q.len()} ..should be 1')
 q.add_to_queue(20)
 q.add_to_queue(30)
 q.add_to_queue(40)
 
-print(f'add 3 more items: {q.len()} ..should be 4')
+print(
+    f'added 20, 30, 40  HEAD = {q.head.value}. Length {q.len()} ..should be 4')
 
 
-print(f'\nRemoving: {q.remove_from_queue()}')
-print(f'removed 1 item: {q.len()} ..should be 3')
+print(f'\nRemoving tail: {q.remove_from_queue()}')
+print(f'removed 1 item: {q.len()} ..should be 3. HEAD = {q.head.value}')
 
-print(f'\nRemoving again: {q.remove_from_queue()}')
-print(f'removed 1 item: {q.len()} ..should be 2')
+print(f'\nRemoving tail again: {q.remove_from_queue()}')
+print(f'removed 1 item: {q.len()} ..should be 2  HEAD = {q.head.value}')
