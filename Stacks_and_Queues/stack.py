@@ -46,6 +46,7 @@ class Stack:
         return self.length
 
 
+"""
 s = Stack()
 print(f'first len: {s.len()} ...should be 0')
 s.add_to_stack(10)
@@ -61,3 +62,4 @@ print(f'removed 1 item: {s.len()} ..should be 3')
 
 print(f'\nRemoving again: {s.remove_from_stack()}')
 print(f'removed 1 item: {s.len()} ..should be 2')
+"""
