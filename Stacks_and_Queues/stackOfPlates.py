@@ -30,6 +30,8 @@ Implement a function popAt (int index) which performs a pop operation on a speci
 # IDEA 1 is more time efficient, as it does all operations at O(1) constant time
 # IDEA 2 does popAt at O(n) linear time based on number of substacks
 
+# To clarify: If you popAt specific substack, should you then push into that empty substack?
+
 from stack import Stack, Node
 
 
@@ -80,6 +82,16 @@ class SetOfStacks:
 
         return removed_value
 
+    def popAt(self, key):
+        if key not in self.stacks:
+            print('ERROR: Stack key/index does not exist in Set of Stacks')
+            return None
+
+        st = self.stacks[key]
+        removed_value = st.remove_from_stack()
+
+        return removed_value
+
 
 a = SetOfStacks(3)
 print(f'SetOfStack len: {a.set_of_stacks_len()}. Should be 0')
@@ -99,3 +111,4 @@ print(f'Pop: {a.pop()}')
 print(f'SetOfStack len: {a.set_of_stacks_len()}. Should be 2')
 a.push(9)
 print(f'SetOfStack len: {a.set_of_stacks_len()}. Should be 3')
+print(f'Pop at stack 1. Value: {a.popAt(1)}')
