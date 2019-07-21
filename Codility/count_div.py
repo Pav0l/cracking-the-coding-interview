@@ -36,7 +36,7 @@ def new_count_div(A, B, K):
     if A % K == 0:
         isEven = 1
 
-    return (B-A)//K + isEven
+    return B//K - A//K + isEven
 
 
 a = 11
