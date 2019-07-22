@@ -30,7 +30,11 @@ Implement a function popAt (int index) which performs a pop operation on a speci
 # IDEA 1 is more time efficient, as it does all operations at O(1) constant time
 # IDEA 2 does popAt at O(n) linear time based on number of substacks
 
-# To clarify: If you popAt specific substack, should you then push into that empty substack?
+# To clarify:
+# If you popAt specific substack, should you then push into that empty substack?
+# or should it shift all other nodes?
+# or should it just ignore it?
+# These points would be up for discussion
 
 from stack import Stack, Node
 
@@ -89,6 +93,11 @@ class SetOfStacks:
 
         st = self.stacks[key]
         removed_value = st.remove_from_stack()
+
+        # if you removed the last item from substack
+        # pop the key from dict
+        if st.length == 0:
+            self.stacks.pop(key)
 
         return removed_value
 
